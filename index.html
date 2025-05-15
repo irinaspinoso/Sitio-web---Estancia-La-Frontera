@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Estancia La Frontera</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="estilos.css" rel="stylesheet">
+<script src="script.js"></script>
+	
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+	
+</head>
+
+<body>
+	<header>
+		<img class="logo" src="la frontera.png" alt="la frontera">
+		<div class="menu-icon">☰</div>
+    <nav class="main-nav">
+        <ul class="barra">
+            <li><a href="nosotros.html">NOSOTROS</a></li>
+            <li><a href="experiencia.html">EXPERIENCIA</a></li>
+            <li><a href="galeria.html">GALERÍA</a></li>
+            <li><a href="#contacto">CONTACTO</a></li>
+        </ul>
+    </nav>
+	</header>
+	
+	<div id="inicio" class="banner">
+    <button class="prev" onclick="scrollLeft()">&#9664;</button>
+    <div class="scroll-container" id="slider">
+        <img src="baner1.png" alt="Imagen 1">
+        <img src="baner2.png" alt="Imagen 2">
+        <img src="baner3.png" alt="Imagen 3">
+        <img src="baner4.png" alt="Imagen 4">
+        <img src="baner5.png" alt="Imagen 5">
+    </div>
+    <button class="next" onclick="scrollRight()">&#9654;</button>
+</div>
+
+	<main>
+	<div class="contenedor1">
+		<section id="nosotros" class="contenedor2">
+        <img src="nosotros1.png" alt="Nosotros" class="nosotros">
+		<div class="texto">
+            <h1>Nosotros</h1>
+            <p>Somos una familia unida por generaciones a la tierra. Nuestra estancia nació gracias al esfuerzo de nuestro abuelo, quien transformó un campo virgen en un lugar productivo y familiar. Hoy seguimos su legado con trabajo, respeto por la naturaleza y el valor de lo hecho en familia.
+
+			</p>
+    
+        </div>
+		</section> 
+		</div>
+		
+		
+		
+<div class="cajas">
+    <div id="experiencia" class="contenedor2">
+        <div class="caja">
+            <h1>Experiencia</h1>
+            <img class="foto" src="experiencia1.png" alt="Imagen de experiencia" onclick="openModal('modalExperiencia')">
+        </div>
+    </div>
+
+    <div id="galeria" class="contenedor2">
+        <div class="caja">
+            <h1>Galería</h1>
+            <img class="foto" src="galeria1.png" alt="Imagen de galería" onclick="openModal('modalGaleria')">
+        </div>
+    </div>
+</div>
+
+<!-- Modal Experiencia -->
+<div id="modalExperiencia" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modalExperiencia')">&times;</span>
+        <h1>Experiencia</h1>
+		<p>Sumergite en la naturaleza y viví momentos inolvidables en nuestra estancia. Ofrecemos la posibilidad de acampar bajo un cielo lleno de estrellas, rodeado de paisajes únicos y la tranquilidad del campo. Además, podés disfrutar de cabalgatas guiadas a través de senderos que recorren bosques, ríos y amplias praderas, conectándote con la esencia más auténtica de la vida rural. Ya sea en una aventura a caballo o una noche junto al fogón, cada experiencia está pensada para que te lleves recuerdos únicos.</p>
+        <div class="slider" id="sliderExperiencia">
+            <img class="slider-img" src="experiencia1.png" alt="Imagen de experiencia" onclick="showImageInExpandedView(0, 'sliderExperiencia')">
+            <img class="slider-img" src="experiencia2.png" alt="Imagen adicional de experiencia" onclick="showImageInExpandedView(1, 'sliderExperiencia')">
+            <img class="slider-img" src="experiencia3.png" alt="Imagen extra de experiencia" onclick="showImageInExpandedView(2, 'sliderExperiencia')">
+			<img class="slider-img" src="experiencia4.png" alt="Imagen extra de experiencia" onclick="showImageInExpandedView(2, 'sliderExperiencia')">
+			<img class="slider-img" src="experiencia5.png" alt="Imagen extra de experiencia" onclick="showImageInExpandedView(2, 'sliderExperiencia')">
+        </div>
+        <p>Hacé clic en una imagen para ampliarla.</p>
+    </div>
+</div>
+
+<!-- Modal Galería -->
+<div id="modalGaleria" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modalGaleria')">&times;</span>
+        <h1>Galería</h1>
+		<p>Descubrí en imágenes todo lo que nuestra estancia tiene para ofrecer. Te invitamos a recorrer cada rincón a través de nuestras fotos: los paisajes naturales, las cabalgatas, las áreas de camping y los momentos únicos que podés vivir. Cada imagen refleja la esencia de la vida al aire libre y la calidez de nuestras experiencias. ¡Dejá que las fotos te inspiren a ser parte de esta aventura!</p>
+        <div class="slider" id="sliderGaleria">
+            <img class="slider-img" src="galeria1.png" alt="Imagen de galería" onclick="showImageInExpandedView(0, 'sliderGaleria')">
+            <img class="slider-img" src="galeria2.png" alt="Imagen adicional de galería" onclick="showImageInExpandedView(1, 'sliderGaleria')">
+            <img class="slider-img" src="galeria3.png" alt="Imagen extra de galería" onclick="showImageInExpandedView(2, 'sliderGaleria')">
+			<img class="slider-img" src="galeria4.png" alt="Imagen extra de galería" onclick="showImageInExpandedView(2, 'sliderGaleria')">
+			<img class="slider-img" src="galeria5.png" alt="Imagen extra de galería" onclick="showImageInExpandedView(2, 'sliderGaleria')">
+        </div>
+        <p>Hacé clic en una imagen para ampliarla.</p>
+    </div>
+</div>
+
+<!-- Modal para imágenes ampliadas -->
+<div id="imageModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('imageModal')">&times;</span>
+        <img id="imageModalContent" src="" alt="Imagen ampliada" class="modal-img">
+        <button class="prev" onclick="moveExpandedImage(-1)">◀</button>
+        <button class="next" onclick="moveExpandedImage(1)">▶</button>
+    </div>
+</div>
+
+<div class="pregunta-container">
+
+	<input type="text" placeholder="Deja tu pregunta..." class="pregunta-input">
+	<p class="pregunta-btn">Enviar</p>
+</div>
+
+
+		
+		
+		
+	</main>
+	<footer id="contacto" class="footer">
+		
+    <div class="footer-section izquierda">
+        <p>Ruta Escénica 41, Monte Zeballos, Santa Cruz</p>
+    </div>
+    <div class="footer-section centro">
+        <p><a href="mailto:spinosoirina@gmail.com">ispino@gmail.com</a></p>
+        <p><a href="tel:11 6190-2576">11 6190-2576</a></p>
+    </div>
+    <div class="footer-section derecha">
+        
+        <a href="https://www.facebook.com/people/Estancia-La-Frontera/pfbid024KS1Xp1Bw5ZztZ3nkS3i2S65LwpJGrj83udBXaHWKN1qE3d3SJ2UCo63PUy2FofAl/?rdid=3kzRU7MIM97vyndl&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16JvHbQ9db%2F" target="_blank">
+            <img src="facebook icon.png" alt="Facebook" class="social-icon">
+        </a>
+    </div>
+</footer>
+
+		
+
+<script src="script.js"></script>
+
+</body>
+</html>

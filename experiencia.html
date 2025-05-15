@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Experiencia</title>
+    <link href="estilos.css" rel="stylesheet">
+    <script src="script.js"></script>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	
+	
+<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+	
+</head>
+<body>
+    <header>
+		<img class="logo" src="la frontera.png" alt="la frontera">
+		<div class="menu-icon">☰</div>
+    <nav class="main-nav">
+        <ul class="barra">
+            <li><a href="index.html">INICIO</a></li>
+			<li><a href="nosotros.html">NOSOTROS</a></li>
+            <li><a href="experiencia.html">EXPERIENCIA</a></li>
+            <li><a href="galeria.html">GALERÍA</a></li>
+            <li><a href="#contacto">CONTACTO</a></li>
+        </ul>
+    </nav>
+	</header>
+    <main>
+        <section class="seccion">
+            <h1>Experiencia</h1>
+            <p>Sumergite en la naturaleza y viví momentos inolvidables en nuestra estancia. Ofrecemos la posibilidad de acampar bajo un cielo lleno de estrellas, rodeado de paisajes únicos y la tranquilidad del campo. Además, podés disfrutar de cabalgatas guiadas a través de senderos que recorren bosques, ríos y amplias praderas, conectándote con la esencia más auténtica de la vida rural. Ya sea en una aventura a caballo o una noche junto al fogón, cada experiencia está pensada para que te lleves recuerdos únicos.</p>
+            
+			
+			<!-- Portada con la primera imagen -->
+<div class="banner">
+    <img class="portada-experiencia" src="experiencia1.png" alt="Imagen de portada" onclick="abrirModalExperiencia()">
+</div>
+
+<!-- Modal con el slider -->
+<div id="modalExperiencia" class="modal-experiencia">
+    <div class="modal-contenido-experiencia">
+        <span class="cerrar-experiencia" onclick="cerrarModalExperiencia()">&times;</span>
+        <div class="slider-experiencia-container">
+            <div class="slider-experiencia">
+                <img class="slider-experiencia-img" src="experiencia1.png" alt="Imagen 1">
+                <img class="slider-experiencia-img" src="experiencia2.png" alt="Imagen 2">
+                <img class="slider-experiencia-img" src="experiencia3.png" alt="Imagen 3">
+                <img class="slider-experiencia-img" src="experiencia4.png" alt="Imagen 4">
+                <img class="slider-experiencia-img" src="experiencia5.png" alt="Imagen 5">
+            </div>
+        </div>
+        <button class="prev-experiencia" onclick="cambiarImagenExperiencia(-1)">◀</button>
+        <button class="next-experiencia" onclick="cambiarImagenExperiencia(1)">▶</button>
+    </div>
+</div>
+			<p>(Hacé click en la imagen para ampliarla)</p>
+
+
+
+        </section>
+    </main>
+
+	<footer id="contacto" class="footer">
+		
+    <div class="footer-section izquierda">
+        <p>Ruta Escénica 41, Monte Zeballos, Santa Cruz</p>
+    </div>
+    <div class="footer-section centro">
+        <p><a href="mailto:spinosoirina@gmail.com">ispino@gmail.com</a></p>
+        <p><a href="tel:11 6190-2576">11 6190-2576</a></p>
+    </div>
+    <div class="footer-section derecha">
+        
+        <a href="https://www.facebook.com/people/Estancia-La-Frontera/pfbid024KS1Xp1Bw5ZztZ3nkS3i2S65LwpJGrj83udBXaHWKN1qE3d3SJ2UCo63PUy2FofAl/?rdid=3kzRU7MIM97vyndl&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16JvHbQ9db%2F" target="_blank">
+            <img src="facebook icon.png" alt="Facebook" class="social-icon">
+        </a>
+    </div>
+</footer>
+</body>
+</html>
