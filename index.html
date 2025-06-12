@@ -17,7 +17,10 @@
 
 <body>
 	<header>
-		<img class="logo" src="la frontera.png" alt="la frontera">
+		<a href="index.html">
+    	<img class="logo" src="logoestancia.png" alt="la frontera">
+		</a>
+		
 		<div class="menu-icon">☰</div>
     <nav class="main-nav">
         <ul class="barra">
@@ -29,8 +32,11 @@
     </nav>
 	</header>
 	
+	<div class="scroll-top" onclick="scrollToTop()">▲</div>
+
+	
 	<div id="inicio" class="banner">
-    <button class="prev" onclick="scrollLeft()">&#9664;</button>
+    <button class="prev" onclick="scrollizquierda()">&#9664;</button>
     <div class="scroll-container" id="slider">
         <img src="baner1.png" alt="Imagen 1">
         <img src="baner2.png" alt="Imagen 2">
@@ -61,14 +67,14 @@
     <div id="experiencia" class="contenedor2">
         <div class="caja">
             <h1>Experiencia</h1>
-            <img class="foto" src="experiencia1.png" alt="Imagen de experiencia" onclick="openModal('modalExperiencia')">
+            <img class="foto" src="duplicarexperiencia1.png" alt="Imagen de experiencia" onclick="openModal('modalExperiencia')">
         </div>
     </div>
 
     <div id="galeria" class="contenedor2">
         <div class="caja">
             <h1>Galería</h1>
-            <img class="foto" src="galeria1.png" alt="Imagen de galería" onclick="openModal('modalGaleria')">
+            <img class="foto" src="duplicargaleria1.jpg" alt="Imagen de galería" onclick="openModal('modalGaleria')">
         </div>
     </div>
 </div>
@@ -86,7 +92,7 @@
 			<img class="slider-img" src="experiencia4.png" alt="Imagen extra de experiencia" onclick="showImageInExpandedView(2, 'sliderExperiencia')">
 			<img class="slider-img" src="experiencia5.png" alt="Imagen extra de experiencia" onclick="showImageInExpandedView(2, 'sliderExperiencia')">
         </div>
-        <p>Hacé clic en una imagen para ampliarla.</p>
+        <p>Hacé clic en la imagen para ampliarla.</p>
     </div>
 </div>
 
@@ -103,7 +109,7 @@
 			<img class="slider-img" src="galeria4.png" alt="Imagen extra de galería" onclick="showImageInExpandedView(2, 'sliderGaleria')">
 			<img class="slider-img" src="galeria5.png" alt="Imagen extra de galería" onclick="showImageInExpandedView(2, 'sliderGaleria')">
         </div>
-        <p>Hacé clic en una imagen para ampliarla.</p>
+        <p>Hacé clic en la imagen para ampliarla.</p>
     </div>
 </div>
 
@@ -111,17 +117,38 @@
 <div id="imageModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal('imageModal')">&times;</span>
-        <img id="imageModalContent" src="" alt="Imagen ampliada" class="modal-img">
+        <img id="imageModalContent" alt="Imagen ampliada" class="modal-img">
         <button class="prev" onclick="moveExpandedImage(-1)">◀</button>
         <button class="next" onclick="moveExpandedImage(1)">▶</button>
     </div>
 </div>
 
-<div class="pregunta-container">
+<iframe src="https://mijalrosenberg.github.io/Sabores/anuncio.html" frameborder="0" scrolling="no" class="anuncio"></iframe>
 
-	<input type="text" placeholder="Deja tu pregunta..." class="pregunta-input">
-	<p class="pregunta-btn">Enviar</p>
-</div>
+<section class="form-section">
+    <div class="form-container">
+        <h2 class="formulario">Contáctanos</h2>
+        <p class="formulario">¿Quieres vivir la experiencia de la estancia? Déjanos tu consulta.</p>
+        <form id="contactForm">
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="4" required></textarea>
+            <input type="submit" value="Enviar" class="botonformulario">
+        </form>
+        <p id="confirmacion" style="display: none; color: green; font-weight: bold; margin-top: 10px;">¡Formulario enviado correctamente!</p>
+    </div>
+</section>
+
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Evita que la página se recargue
+        
+        document.getElementById("confirmacion").style.display = "block"; // Muestra el mensaje de confirmación
+        
+        this.reset(); // Limpia el formulario después del envío
+    });
+</script>
+
 
 
 		
@@ -134,8 +161,9 @@
         <p>Ruta Escénica 41, Monte Zeballos, Santa Cruz</p>
     </div>
     <div class="footer-section centro">
-        <p><a href="mailto:spinosoirina@gmail.com">ispino@gmail.com</a></p>
-        <p><a href="tel:11 6190-2576">11 6190-2576</a></p>
+        <p><a href="mailto:spinosoirina@gmail.com" target="_blank">Email</a></p>
+		<p><a href="https://wa.me/5491161902576?text=Hola%2C%20quiero%20hacer%20una%20consulta" target="_blank">WhatsApp</a></p>
+
     </div>
     <div class="footer-section derecha">
         

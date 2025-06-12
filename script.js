@@ -1,10 +1,11 @@
 let currentIndex = 0;
 
-function scrollLeft() {
+function scrollizquierda() {
     const container = document.querySelector('.scroll-container');
     const bannerWidth = document.querySelector('.banner').clientWidth;
+    const totalImages = document.querySelectorAll('.scroll-container img').length;
 
-    if (currentIndex > 0) {
+	if (currentIndex > 0) {
         currentIndex--;
         container.style.transform = `translateX(-${currentIndex * bannerWidth}px)`;
         console.log(`Moved left to index: ${currentIndex}`);
@@ -106,3 +107,8 @@ document.addEventListener("DOMContentLoaded", function() {
         navBar.classList.toggle("activo"); // Alterna la visibilidad del menú
     });
 });
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
