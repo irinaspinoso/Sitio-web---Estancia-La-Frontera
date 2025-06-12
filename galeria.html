@@ -65,7 +65,7 @@
         </section>
   
 	
-	<section class="form-section">
+<section class="form-section">
     <div class="form-container">
         <h2 class="formulario">Contáctanos</h2>
         <p class="formulario">¿Quieres vivir la experiencia de la estancia? Déjanos tu consulta.</p>
@@ -75,9 +75,19 @@
             <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="4" required></textarea>
             <input type="submit" value="Enviar" class="botonformulario">
         </form>
+        <p id="confirmacion" style="display: none; color: green; font-weight: bold; margin-top: 10px;">¡Formulario enviado correctamente!</p>
     </div>
 </section>
 
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Evita que la página se recargue
+        
+        document.getElementById("confirmacion").style.display = "block"; // Muestra el mensaje de confirmación
+        
+        this.reset(); // Limpia el formulario después del envío
+    });
+</script>
 	
 	
 	
