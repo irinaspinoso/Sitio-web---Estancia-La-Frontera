@@ -36,6 +36,7 @@ margin: 5px;
 text-decoration: none; 
 border-radius: 10px; }
 
+nav a:hover{background-color: #9F9F9F;}
 
 .main-nav {
 display: block; /* Mostramos el menú */
@@ -389,9 +390,9 @@ img {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    width: 60%;
+    width: 40%;
     position: relative;
-    margin: 15% auto;
+    margin: 30% auto;
     border: 1px solid #888;
    
 }

@@ -16,11 +16,13 @@
 </head>
 <body>
    <header>
-		<img class="logo" src="la frontera.png" alt="la frontera">
+		<a href="index.html">
+    	<img class="logo" src="logoestancia.png" alt="la frontera">
+		</a>
+
 		<div class="menu-icon">☰</div>
     <nav class="main-nav">
         <ul class="barra">
-            <li><a href="index.html">INICIO</a></li>
 			<li><a href="nosotros.html">NOSOTROS</a></li>
             <li><a href="experiencia.html">EXPERIENCIA</a></li>
             <li><a href="galeria.html">GALERÍA</a></li>
@@ -29,6 +31,7 @@
     </nav>
 	</header>
 	
+	<div class="scroll-top" onclick="scrollToTop()">▲</div>
 	
     <main>
         <section class="seccion">
@@ -36,10 +39,16 @@
             <p>Somos una familia que lleva generaciones unida por la tierra. La historia de nuestra estancia comenzó con el trabajo de nuestro abuelo, quien con esfuerzo y visión transformó un campo casi virgen en un lugar de producción y encuentro. Lo que alguna vez fue un pequeño terreno, hoy es una estancia que conserva el espíritu de sus inicios: el compromiso con el trabajo, el respeto por la naturaleza y el valor de lo hecho en familia. Cada rincón guarda una parte de nuestra historia, y seguimos construyéndola día a día con el mismo amor que él nos enseñó.</p>
            
     
-<!-- Portada con la primera imagen -->
+
+
+
+			
+			<!-- Portada con la primera imagen -->
 <div class="banner">
     <img class="portada-experiencia" src="nosotros1.png" alt="Imagen de portada" onclick="abrirModalExperiencia()">
 </div>
+
+
 
 <!-- Modal con el slider -->
 <div id="modalExperiencia" class="modal-experiencia">
@@ -61,10 +70,29 @@
 
 <p>(Hacé click en la imagen para ampliarla)</p>
 
-
-
         </section>
-    </main>
+   
+
+
+		
+	<section class="form-section">
+    <div class="form-container">
+        <h2 class="formulario">Contáctanos</h2>
+        <p class="formulario">¿Quieres vivir la experiencia de la estancia? Déjanos tu consulta.</p>
+        <form id="contactForm">
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="4" required></textarea>
+            <input type="submit" value="Enviar" class="botonformulario">
+        </form>
+    </div>
+</section>
+
+	
+	
+	
+	</main>
+	
 	
 	<footer id="contacto" class="footer">
 		
@@ -72,8 +100,9 @@
         <p>Ruta Escénica 41, Monte Zeballos, Santa Cruz</p>
     </div>
     <div class="footer-section centro">
-       <p><a href="mailto:spinosoirina@gmail.com">ispino@gmail.com</a></p>
-        <p><a href="tel:11 6190-2576">11 6190-2576</a></p>
+        <p><a href="mailto:spinosoirina@gmail.com" target="_blank">Email</a></p>
+		<p><a href="https://wa.me/5491161902576?text=Hola%2C%20quiero%20hacer%20una%20consulta" target="_blank">WhatsApp</a></p>
+
     </div>
     <div class="footer-section derecha">
         
